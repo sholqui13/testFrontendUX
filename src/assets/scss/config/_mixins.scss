@@ -144,29 +144,6 @@
 }
 
 // ==========================================================================
-// Mixins Avatar Perfil
-// ==========================================================================
-@mixin perfil($width, $height, $border) {
-  .perfil {
-    width: $width;
-    height: $width;
-    border: $border;
-    border-radius: 50%;
-    overflow: hidden;
-    transition: 0.3s;
-    cursor: pointer;
-    img {
-      display: block;
-      height: 100%;
-      max-width: 100%;
-      object-fit: cover;
-      object-position: center;
-      width: 100%;
-    }
-  }
-}
-
-// ==========================================================================
 // Mixins para eliminar apariencia por defecto del navegador
 // ==========================================================================
 @mixin appearance($value) {

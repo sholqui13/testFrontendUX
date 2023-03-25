@@ -36,5 +36,26 @@ export class HeaderComponent implements OnInit {
   showMenu(): void {
     this.openMenu = !this.openMenu;
   }
+  
+  datosMenu2=[
+    {
+      'idioma':'RU - Russian',
+      'url':'#'
+    },
+    {
+      'idioma':'DE - German',
+      'url':'#'
+    },
+    {
+      'idioma':'FR - French',
+      'url':'#'
+    }
+  ]
+
+  public openMenu2: boolean = false;
+
+  showMenu2(): void {
+    this.openMenu2 = !this.openMenu2;
+  }
 
 }

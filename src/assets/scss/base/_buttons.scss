@@ -1,46 +1,18 @@
 .btn {
+   background-color: color(primary, base);
+   color: color(grayscale, white);
    font-family: $font-primary;
    font-size: $font-size;
-   padding: ( $font-size - .25rem ) ( $font-size + .9rem);
+   padding: 1.5rem 7.4rem 1.1rem 7.9rem;
    border: none;
    cursor: pointer;
-   font-weight: 700;
+   font-weight: 500;
    line-height: 1;
    outline: none;
-   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.25);
    text-transform: uppercase;
-   width: 100%;
+   width: auto;
    @include mq-min(md) {
       width: auto;
-   }
-   &.btn-primary {
-      @include button( color( primary, dark ) );
-      &.outline {
-         @include button( transparent, color( primary, dark ) );
-         border: .13rem solid color( primary, dark );
-         &:hover, &:active {
-            @include button( color( primary, dark ) );
-         }
-      }
-   }
-   &.btn-secondary {
-      @include button( color( secondary, base ), color( grayscale, base ) );
-      &.outline {
-         @include button( transparent, color( secondary, base ) );
-         border: .15rem solid color( secondary, base );
-         &:hover, &:active {
-            @include button( color( secondary, base ), color( grayscale, white ));
-         }
-      }
-   }
-   // sizes
-   &.small {
-      padding:    ( $font-size - .50rem ) ( $font-size );
-      font-size:  ( $font-size - .25rem );
-   }
-   &.medium{
-      font-size: map-get($sizes, small);
-      padding: 11px 38px;
    }
 }
 

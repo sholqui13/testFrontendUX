@@ -1,2 +1,154 @@
 @import '../../assets/scss/config/variables';
 @import '../../assets/scss/config/mixins';
+
+.header{
+    border-bottom: 0.1rem solid #E9ECEF;
+    max-width: 144rem;
+    min-width: 33rem;
+    margin: auto;
+    .container{
+        padding: 1.5rem 1.7rem;
+        width: 100%;
+        .btn{
+            &.btn-primary{
+                font-weight: bold;
+                border: none;
+                border-radius: initial;
+                font-size: 1.2rem;
+            }
+        }
+        .logo{
+            margin-right: 2.5rem;
+        }
+        .hamburguer{
+            cursor: pointer;
+            border: none;
+            background: initial;
+            padding-left: 0.6rem;
+            .icon-icon-hamburguer{
+                &::before{
+                    content: "\e905";
+                    color: color(primary, base);
+                    font-family: iconFont;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .buttons-right{
+            display: flex;
+            .search{
+                cursor: pointer;
+                border: none;
+                background: initial;
+                padding-right: 0.1rem;
+                padding-left: 3.4rem;
+                max-height: 3.2rem;
+                .icon-icon-search{
+                    &::before{
+                        content: "\e90c";
+                        color: color(primary, base);
+                        font-family: iconFont;
+                        font-size: 2rem;
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+            }
+            .btn-access{
+                line-height: 1.7rem;
+                max-height: 2rem;
+                padding: 0.8rem 1rem;
+            }
+        }
+        .container-menu{
+            display: none;
+            order: -1;
+            background: white;
+            width: 100%;
+            min-height: 100%;
+            z-index: 9;
+            position: absolute;
+            top: 6rem;
+            left: 0;
+            &.open{
+                display: block;
+            }
+            .main-menu{
+                margin-top: 6rem;
+                text-align: center;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                a{
+                    display: block;
+                    height: 3rem;
+                    padding: 1rem;
+                    max-width: 20rem;
+                    margin: auto;
+                    margin-bottom: 2rem;
+                    &:hover{
+                        color: color(primary, base);
+                        border-bottom: 0.3rem solid color(primary, base);
+                        max-width: 20rem;
+                        padding-bottom: 1.78rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@include mq-min(lg){
+    .header{
+        min-height: 6.5rem;
+        margin-bottom: .6rem;
+        .container{
+            max-height: 100%;
+            padding: 2.3rem 0.4rem 1rem 1rem;
+            .buttons-right{
+                .btn-access{
+                    margin-right: 2.6rem;
+                    min-width: 7.7rem;
+                }
+                .search{
+                    border-left: 0.15rem solid color(grayscale, gray-2);
+                    padding-left: 2.1rem;
+                    padding-right: 0;
+                    margin-right: -1.7rem;
+                }
+            }
+            .container-menu{
+                display: flex;
+                order: initial;
+                position: initial;
+                width: initial;
+                margin-right: 7.6rem;
+                .main-menu{
+                    margin-top: 0;
+                    flex-direction: initial;
+                    max-width: 38.3rem;
+                    a{
+                        margin: 0 3.7rem 0 0;
+                        padding: 1rem 0 2.95rem;
+                        &:hover{
+                            padding-bottom: 2.95rem;
+                        }
+                    }
+                }
+            }
+            .hamburguer{
+                display: none;
+            }
+            .logo{
+                .logo-desktop{
+                    display: block;
+                    height: auto;
+                    margin-top: 0.3rem;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

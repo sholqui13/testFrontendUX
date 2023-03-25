@@ -1,0 +1,39 @@
+@import '../../assets/scss/config/variables';
+@import '../../assets/scss/config/mixins';
+
+.banner{
+    background-image: url("../../assets/images/banners/plane.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__container{
+        margin: 0 1.8rem;
+        color: color(grayscale, white);
+        h2{
+            padding-top: 16.1rem;
+            font-size: map-get($sizes, "medium");
+            line-height: 3.7rem;
+            font-weight: 400;
+        }
+        h3{
+            font-size: map-get($sizes, "thumb");
+            font-weight: 400;
+            line-height: 2.2rem;
+            margin: 0.5rem 0 4.1rem;
+            max-width: 44rem;
+        }
+        .cta{
+            font-size: map-get($sizes, "half");
+            border-radius: 3rem;
+            margin-bottom: 8rem;
+        }
+    }
+}
+@include mq-min(xl){
+    .banner{
+        min-height: 47.5rem;
+        &__container{
+            margin: auto;
+            max-width: 108rem;
+        }
+    }
+}

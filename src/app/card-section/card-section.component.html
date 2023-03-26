@@ -1,0 +1,12 @@
+<section class="d-flex fd-column">
+  <div class="container" *ngFor="let item of infoCardNotices">
+    <div class="cards-notices_image">
+      <a href="#" class="cards-notices_image_picture"><img src="{{item.imageCard}}" alt="Imagen destinos" width="233" height="207"></a>
+      <div class="cards-notices_image_info">
+        <p class="title">{{item.text1}}</p>
+        <p class="paragraph">{{item.text2}}<a href="#">more</a></p>
+        <p class="price">{{item.text3}}</p>
+      </div>
+    </div>
+  </div>
+</section>

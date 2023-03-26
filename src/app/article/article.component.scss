@@ -19,3 +19,11 @@
         }
     }
 }
+@include mq-min(sm){
+    .container{
+        &__section{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

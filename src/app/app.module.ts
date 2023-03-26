@@ -8,15 +8,17 @@ import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
 import { ArticleComponent } from './article/article.component';
 import { AsideComponent } from './aside/aside.component';
+import { CardSectionComponent } from './card-section/card-section.component';
 
 @NgModule({
-  declarations: [					
+  declarations: [						
     AppComponent,
       HeaderComponent,
       BannerComponent,
       FooterComponent,
       ArticleComponent,
-      AsideComponent
+      AsideComponent,
+      CardSectionComponent
    ],
   imports: [
     BrowserModule,

@@ -1,0 +1,69 @@
+@import '../../assets/scss/config/variables';
+@import '../../assets/scss/config/mixins';
+
+section{
+    max-width: fit-content;
+    margin: auto;
+    padding-top: 2.8rem;
+    .container{
+        padding-bottom: 3rem;
+        .cards-notices_image{
+            cursor: pointer;
+            position: relative;
+            &_info{
+                padding: 0.3rem 1rem 0;
+                position: absolute;
+                color: white;
+                width: 23.3rem;
+                height: auto;
+                background: #000000AD 0% 0% no-repeat padding-box;
+                top: 11.9rem;
+                border-radius: 0 0 1.6rem 1.6rem;
+                .paragraph{
+                    display: none;
+                }
+                .title{
+                    font-weight: lighter;
+                }
+                .price{
+                    font-size: 2rem;
+                    font-weight: bold;
+                    text-align: right;
+                }
+            }
+            &_picture{
+                img{
+                    border-radius: 1.6rem;
+                }
+            }
+            &:hover{
+                .cards-notices_image_info{
+                    border-radius: 1.6rem;
+                    height: 20.7rem;
+                    top: 0rem;
+                    padding-top: 2.8rem;
+                    padding-left: 1.7rem;
+                    font-weight: lighter;
+                    .paragraph{
+                        display: block;
+                        a{
+                            color: white;
+                            cursor: pointer;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include mq-min(sm){
+    section{
+        flex-wrap: wrap;
+        flex-direction: row;
+        .container{
+            margin-left: 2rem;
+            width: initial;
+        }
+    }
+}

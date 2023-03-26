@@ -1,0 +1,12 @@
+<aside class="d-flex fd-column">
+  <h3>Menu</h3>
+  <div class="nav-aside">
+    <nav class="nav-aside__menu d-flex fd-column">
+      <ul>
+          <li *ngFor="let item of datosAside">
+              <a href="{{item.url}}">{{item.title}}</a>
+          </li>
+      </ul>
+    </nav>
+  </div>
+</aside>

@@ -1,0 +1,21 @@
+@import '../../assets/scss/config/variables';
+@import '../../assets/scss/config/mixins';
+
+.container{
+    &__title{
+        padding: 6.5rem 0 0;
+        .line{
+            border-top: 0.1rem solid #605F5E;
+            height: 0.2rem;
+            width: 100%;
+            padding: 0;
+            margin: 2rem auto 0 auto;
+        }
+        h2{
+            padding-right: 1.4rem;
+            color: color(secondary, base);
+            font-size: 2.6rem;
+            font-weight: normal;
+        }
+    }
+}

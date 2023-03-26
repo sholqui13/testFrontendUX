@@ -33,11 +33,11 @@ footer{
                 h2,
                 h3{
                     color: color(primary, base);
-                    font-size: 1.8rem;
+                    font-size: map-get($sizes, "thumb");
                     font-weight: normal;
                 }
                 &__about{
-                    font-size: 1.4rem;
+                    font-size: map-get($sizes, "small");
                     max-width: 17.5rem;
                     margin: auto;
                     padding-bottom: 2rem;
@@ -48,7 +48,7 @@ footer{
                         a{
                             color: color(grayscale, white);
                             cursor: pointer;
-                            font-size: 1.8rem;
+                            font-size: map-get($sizes, "thumb");
                         }
                     }
                     h3{

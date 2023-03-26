@@ -1,0 +1,50 @@
+<footer class="d-flex ai-center">
+  <div class="container">
+    <div class="content-top d-flex ai-center fd-column">
+      <h2>Follow us</h2>
+      <div class="social-footer">
+        <nav>
+          <ul class="d-flex fd-row jc-space-evenly">
+              <li class="info-social" *ngFor="let item of socialFooter">
+                  <a href="{{item.url}}"><span class="{{item.icon}}"></span></a>
+              </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-links__info">
+        <div class="footer-links__info__about">
+          <h2>About Use</h2>
+          <p>We want to help passengers to reach their destinations</p>
+        </div>
+        <div class="footer-links__info__titles d-flex jc-space-around">
+          <nav class="footer-menu d-flex fd-column">
+            <h3>Explore</h3>
+            <ul>
+                <li *ngFor="let item of datosFooter">
+                    <a href="{{item.url}}">{{item.title}}</a>
+                </li>
+            </ul>
+          </nav>
+          <nav class="footer-menu d-flex fd-column">
+            <h3>Information</h3>
+            <ul>
+                <li *ngFor="let item of datosFooter2">
+                    <a href="{{item.url}}">{{item.title}}</a>
+                </li>
+            </ul>
+          </nav>
+          <nav class="footer-menu d-flex fd-column">
+            <h3>Services</h3>
+            <ul>
+                <li *ngFor="let item of datosFooter3">
+                    <a href="{{item.url}}">{{item.title}}</a>
+                </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

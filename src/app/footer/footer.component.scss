@@ -1,0 +1,90 @@
+@import '../../assets/scss/config/variables';
+@import '../../assets/scss/config/mixins';
+
+footer{
+    min-height: 40.6rem;
+    background-color: color(primary, dark);
+    color: color(grayscale, white);
+    .container{
+        padding: 3.3rem 0 7rem;
+        .content-top{
+            font-size: map-get($sizes, "half");
+            margin-bottom: 3.6rem;
+            h2{
+                font-weight: normal;
+                padding-bottom: 2rem;
+            }
+            .social-footer{
+                .info-social{
+                    cursor: pointer;
+                    span{
+                        padding: 0 1rem;
+                        &::before{
+                            color: color(grayscale, white);
+                            font-size: map-get($sizes, "medium");
+                        }
+                    }
+                }
+            }
+        }
+        .footer-links{
+            &__info{
+                text-align: center;
+                h2,
+                h3{
+                    color: color(primary, base);
+                    font-size: 1.8rem;
+                    font-weight: normal;
+                }
+                &__about{
+                    font-size: 1.4rem;
+                    max-width: 17.5rem;
+                    margin: auto;
+                    padding-bottom: 2rem;
+                }
+                &__titles{
+                    li{
+                        padding-bottom: 1.2rem;
+                        a{
+                            color: color(grayscale, white);
+                            cursor: pointer;
+                            font-size: 1.8rem;
+                        }
+                    }
+                    h3{
+                        margin-bottom: 1.5rem;
+                    }
+                    .footer-menu{
+                        max-width: 10rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@include mq-min(lg){
+    footer{
+        .container{
+            .footer-links{
+                &__info{
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin: auto;
+                    &__about{
+                        margin: initial;
+                        text-align: initial;
+                    }
+                    &__titles{
+                        min-width: 70rem;
+                        justify-content: space-between;
+                        text-align: initial;
+                        .footer-menu{
+                            max-width: initial;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

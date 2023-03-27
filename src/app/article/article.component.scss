@@ -18,6 +18,21 @@
             font-weight: normal;
         }
     }
+    &__section{
+        margin-bottom: 6.5rem;
+        &__chosen{
+            max-width: 23.3rem;
+            text-align: center;
+            margin: auto;
+            border-top: 1px solid;
+            color: #707070;
+            margin-top: 4rem;
+            h3{
+                margin-top: 0.6rem;
+                color: #707070;
+            }
+        }
+    }
 }
 @include mq-min(sm){
     .container{

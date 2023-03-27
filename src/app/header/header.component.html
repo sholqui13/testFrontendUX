@@ -1,19 +1,21 @@
 <header class="header">
   <div class="container d-flex fd-row jc-space-between">
       <button class="hamburguer" (click)="showMenu()" [ngClass]="openMenu ? 'open' : ''">
-          <span class="icon-arrow-down"></span>
+          <span class="icon-icon-hamburguer"></span>
+          <span class="icon-icon-close"></span>
       </button>
-      <div>
-        <h1>AIRLINE</h1>
+      <h1>AIRLINE</h1>
+      <div class="menu d-flex jc-space-between">
         <div class="container-menu d-flex" [ngClass]="openMenu ? 'open' : ''">
           <nav class="main-menu">
               <a *ngFor="let item of datosMenu" href="{{item.url}}" class="button text-link">{{item.titulo}}</a>
           </nav>
         </div>
         <div class="buttons-right">
-            <a href="#" class="btn btn-primary btn-access">en</a>
+            <a href="#" class="btn btn-idiom">en</a>
             <button class="down" (click)="showMenu2()" [ngClass]="openMenu2 ? 'open' : ''">
                 <span class="icon-arrow-down"></span>
+                <span class="icon-arrow-top"></span>
             </button>
             <div class="container-menu-idiomas d-flex" [ngClass]="openMenu2 ? 'open' : ''">
               <nav class="main-menu">

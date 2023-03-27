@@ -2,96 +2,161 @@
 @import '../../assets/scss/config/mixins';
 
 .header{
-    border-bottom: 0.1rem solid #E9ECEF;
-    max-width: 144rem;
     min-width: 33rem;
     margin: auto;
+    max-height: 3rem;
     .container{
+        max-height: 8rem;
         padding: 1.5rem 1.7rem;
+        position: absolute;
         width: 100%;
-        .btn{
-            &.btn-primary{
-                font-weight: bold;
-                border: none;
-                border-radius: initial;
-                font-size: 1.2rem;
-            }
-        }
-        .logo{
-            margin-right: 2.5rem;
+        h1{
+            font-size: 3.6rem;
+            color: white;
         }
         .hamburguer{
             cursor: pointer;
             border: none;
             background: initial;
             padding-left: 0.6rem;
+            .icon-icon-close{
+                display: none;
+            }
             .icon-icon-hamburguer{
                 &::before{
                     content: "\e905";
-                    color: color(primary, base);
+                    color: color(grayscale, white);
                     font-family: iconFont;
-                    font-size: 1.5rem;
+                    font-size: 2rem;
+                }
+            }
+            &.open{
+                .icon-icon-close{
+                    display: block;
+                    &::before{
+                        content: "\e909";
+                        color: color(grayscale, white);
+                        font-family: iconFont;
+                        font-size: 2rem;
+                    }
+                }
+                .icon-icon-hamburguer{
+                    display: none;
                 }
             }
         }
-        .buttons-right{
-            display: flex;
-            .search{
-                cursor: pointer;
-                border: none;
-                background: initial;
-                padding-right: 0.1rem;
-                padding-left: 3.4rem;
-                max-height: 3.2rem;
-                .icon-icon-search{
-                    &::before{
-                        content: "\e90c";
-                        color: color(primary, base);
-                        font-family: iconFont;
-                        font-size: 2rem;
-                        width: 2rem;
-                        height: 2rem;
+        .menu{
+            .btn{
+                &.btn-primary{
+                    font-weight: bold;
+                    border: none;
+                    border-radius: initial;
+                    font-size: 1.2rem;
+                }
+            }
+            .buttons-right{
+                display: flex;
+                position: relative;
+                height: 4rem;
+                align-items: center;
+                .btn-idiom{
+                    width: 2rem;
+                    height: 2.2rem;
+                    text-transform: inherit;
+                    background: none;
+                    color: white;
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    padding: 0;
+                    margin-top: 0.9rem;
+                }
+                .down{
+                    background: no-repeat;
+                    border: none;
+                    color: white;
+                    cursor: pointer;
+                    padding: 0;
+                    margin-top: 0.7rem;
+                    .icon-arrow-down{
+                        font-size: 1.8rem;
+                        margin-left: 0.4rem;
+                    }
+                    .icon-arrow-top{
+                        display: none;
+                    }
+                    &.open{
+                        .icon-arrow-top{
+                            display: block;
+                            font-size: 1.8rem;
+                            margin-left: 0.4rem;
+                        }
+                        .icon-arrow-down{
+                            display: none;
+                        }
+                    }    
+                }
+                .container-menu-idiomas{
+                    display: none;
+                    position: absolute;
+                    top: 6rem;
+                    right: 0rem;
+                    background: white;
+                    flex-direction: column;
+                    padding: 1.6rem;
+                    border-radius: 1.5rem;
+                    min-width: 14.5rem;
+                    line-height: 2.5rem;
+                    z-index: 99999;
+                    &.open{
+                        display: block;
+                    }
+                    .text-link{
+                        width: max-content;
+                        text-transform: initial;
+                        color: #247BA0;
+                        font-weight: normal;
+                        &:hover{
+                            font-weight: bolder;
+                        }
                     }
                 }
             }
-            .btn-access{
-                line-height: 1.7rem;
-                max-height: 2rem;
-                padding: 0.8rem 1rem;
-            }
-        }
-        .container-menu{
-            display: none;
-            order: -1;
-            background: white;
-            width: 100%;
-            min-height: 100%;
-            z-index: 9;
-            position: absolute;
-            top: 6rem;
-            left: 0;
-            &.open{
-                display: block;
-            }
-            .main-menu{
-                margin-top: 6rem;
-                text-align: center;
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                a{
+            .container-menu{
+                display: none;
+                order: -1;
+                background: white;
+                width: 100%;
+                min-height: 100%;
+                z-index: 9;
+                position: absolute;
+                top: 8rem;
+                left: 0;
+                &.open{
                     display: block;
-                    height: 3rem;
-                    padding: 1rem;
-                    max-width: 20rem;
-                    margin: auto;
-                    margin-bottom: 2rem;
-                    &:hover{
+                }
+                .main-menu{
+                    margin-top: 6rem;
+                    text-align: center;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-bottom: 70rem;
+                    a{
                         color: color(primary, base);
-                        border-bottom: 0.3rem solid color(primary, base);
+                        display: block;
+                        height: 3rem;
+                        padding: 1rem;
                         max-width: 20rem;
-                        padding-bottom: 1.78rem;
+                        margin: auto;
+                        margin-bottom: 2rem;
+                        text-transform: capitalize;
+                        &:hover{
+                            color: color(grayscale, white);
+                            border-bottom: 0.2rem solid;
+                            max-width: 20rem;
+                            padding-bottom: 1.78rem;
+                        }
                     }
                 }
             }
@@ -102,52 +167,50 @@
     .header{
         min-height: 6.5rem;
         margin-bottom: .6rem;
+        position: absolute;
+        width: -webkit-fill-available;
         .container{
-            max-height: 100%;
-            padding: 2.3rem 0.4rem 1rem 1rem;
-            .buttons-right{
-                .btn-access{
-                    margin-right: 2.6rem;
-                    min-width: 7.7rem;
+            position: initial;
+            padding: 1.6rem 0 0 3rem;
+            .menu{
+                flex-direction: column-reverse;
+                align-items: flex-end;
+                position: relative;
+                top: 1rem;
+                .buttons-right{
+                    .btn-idiom,
+                    .down{
+                        margin-top: 3rem;
+                    }
+                    .container-menu-idiomas{
+                        top: 5rem;
+                    }
                 }
-                .search{
-                    border-left: 0.15rem solid color(grayscale, gray-2);
-                    padding-left: 2.1rem;
-                    padding-right: 0;
-                    margin-right: -1.7rem;
-                }
-            }
-            .container-menu{
-                display: flex;
-                order: initial;
-                position: initial;
-                width: initial;
-                margin-right: 7.6rem;
-                .main-menu{
-                    margin-top: 0;
-                    flex-direction: initial;
-                    max-width: 38.3rem;
-                    a{
-                        margin: 0 3.7rem 0 0;
-                        padding: 1rem 0 2.95rem;
-                        &:hover{
-                            padding-bottom: 2.95rem;
+                .container-menu{
+                    display: flex;
+                    order: initial;
+                    position: initial;
+                    width: initial;
+                    background: transparent;
+                    .main-menu{
+                        margin-top: 0;
+                        flex-direction: initial;
+                        a{
+                            color: white;
+                            margin: 0 2.3rem 0 0;
+                            padding: 1rem 0 1.95rem;
+                            text-transform: capitalize;
+                            font-weight: 400;
+                            &:nth-child(4){
+                                margin-right: 0;
+                            }
                         }
                     }
                 }
+                
             }
             .hamburguer{
                 display: none;
-            }
-            .logo{
-                .logo-desktop{
-                    display: block;
-                    height: auto;
-                    margin-top: 0.3rem;
-                    img{
-                        width: 100%;
-                    }
-                }
             }
         }
     }

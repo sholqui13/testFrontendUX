@@ -1,0 +1,203 @@
+.header {
+  min-width: 33rem;
+  margin: auto;
+  max-height: 3rem;
+}
+.header .container {
+  max-height: 8rem;
+  padding: 1.5rem 1.7rem;
+  position: absolute;
+  width: 100%;
+}
+.header .container h1 {
+  font-size: 3.6rem;
+  color: white;
+}
+.header .container .hamburguer {
+  cursor: pointer;
+  border: none;
+  background: initial;
+  padding-left: 0.6rem;
+}
+.header .container .hamburguer .icon-icon-close {
+  display: none;
+}
+.header .container .hamburguer .icon-icon-hamburguer::before {
+  content: "\e905";
+  color: #ffffff;
+  font-family: iconFont;
+  font-size: 2rem;
+}
+.header .container .hamburguer.open .icon-icon-close {
+  display: block;
+}
+.header .container .hamburguer.open .icon-icon-close::before {
+  content: "\e909";
+  color: #ffffff;
+  font-family: iconFont;
+  font-size: 2rem;
+}
+.header .container .hamburguer.open .icon-icon-hamburguer {
+  display: none;
+}
+.header .container .menu .btn.btn-primary {
+  font-weight: bold;
+  border: none;
+  border-radius: initial;
+  font-size: 1.2rem;
+}
+.header .container .menu .buttons-right {
+  display: flex;
+  position: relative;
+  height: 4rem;
+  align-items: center;
+}
+.header .container .menu .buttons-right .btn-idiom {
+  width: 2rem;
+  height: 2.2rem;
+  text-transform: inherit;
+  background: none;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 0;
+  margin-top: 0.9rem;
+}
+.header .container .menu .buttons-right .down {
+  background: no-repeat;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 0.7rem;
+}
+.header .container .menu .buttons-right .down .icon-arrow-down {
+  font-size: 1.8rem;
+  margin-left: 0.4rem;
+}
+.header .container .menu .buttons-right .down .icon-arrow-top {
+  display: none;
+}
+.header .container .menu .buttons-right .down.open .icon-arrow-top {
+  display: block;
+  font-size: 1.8rem;
+  margin-left: 0.4rem;
+}
+.header .container .menu .buttons-right .down.open .icon-arrow-down {
+  display: none;
+}
+.header .container .menu .buttons-right .container-menu-idiomas {
+  display: none;
+  position: absolute;
+  top: 6rem;
+  right: 0rem;
+  background: white;
+  flex-direction: column;
+  padding: 1.6rem;
+  border-radius: 1.5rem;
+  min-width: 14.5rem;
+  line-height: 2.5rem;
+  z-index: 99999;
+}
+.header .container .menu .buttons-right .container-menu-idiomas.open {
+  display: block;
+}
+.header .container .menu .buttons-right .container-menu-idiomas .text-link {
+  width: -moz-max-content;
+  width: max-content;
+  text-transform: initial;
+  color: #247BA0;
+  font-weight: normal;
+}
+.header .container .menu .buttons-right .container-menu-idiomas .text-link:hover {
+  font-weight: bolder;
+}
+.header .container .menu .container-menu {
+  display: none;
+  order: -1;
+  background: white;
+  width: 100%;
+  min-height: 100%;
+  z-index: 9;
+  position: absolute;
+  top: 8rem;
+  left: 0;
+}
+.header .container .menu .container-menu.open {
+  display: block;
+}
+.header .container .menu .container-menu .main-menu {
+  margin-top: 6rem;
+  text-align: center;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 70rem;
+}
+.header .container .menu .container-menu .main-menu a {
+  color: #FB3640;
+  display: block;
+  height: 3rem;
+  padding: 1rem;
+  max-width: 20rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+.header .container .menu .container-menu .main-menu a:hover {
+  color: #ffffff;
+  border-bottom: 0.2rem solid;
+  max-width: 20rem;
+  padding-bottom: 1.78rem;
+}
+
+@media (min-width: 960px) {
+  .header {
+    min-height: 6.5rem;
+    margin-bottom: 0.6rem;
+    position: absolute;
+    width: -webkit-fill-available;
+  }
+  .header .container {
+    position: initial;
+    padding: 1.6rem 0 0 3rem;
+  }
+  .header .container .menu {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    position: relative;
+    top: 1rem;
+  }
+  .header .container .menu .buttons-right .btn-idiom,
+  .header .container .menu .buttons-right .down {
+    margin-top: 3rem;
+  }
+  .header .container .menu .buttons-right .container-menu-idiomas {
+    top: 5rem;
+  }
+  .header .container .menu .container-menu {
+    display: flex;
+    order: initial;
+    position: initial;
+    width: initial;
+    background: transparent;
+  }
+  .header .container .menu .container-menu .main-menu {
+    margin-top: 0;
+    flex-direction: initial;
+  }
+  .header .container .menu .container-menu .main-menu a {
+    color: white;
+    margin: 0 2.3rem 0 0;
+    padding: 1rem 0 1.95rem;
+    text-transform: capitalize;
+    font-weight: 400;
+  }
+  .header .container .menu .container-menu .main-menu a:nth-child(4) {
+    margin-right: 0;
+  }
+  .header .container .hamburguer {
+    display: none;
+  }
+}/*# sourceMappingURL=header.component.css.map */

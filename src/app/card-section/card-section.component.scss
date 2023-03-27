@@ -34,6 +34,7 @@ section{
             &_picture{
                 img{
                     border-radius: 1.6rem;
+                    border: 1px solid #0A2463;
                 }
             }
             &:hover{
@@ -51,6 +52,11 @@ section{
                             cursor: pointer;
                             text-decoration: underline;
                         }
+                    }
+                }
+                .cards-notices_image_picture{
+                    img{
+                        border: 4px solid #FB3640;
                     }
                 }
             }

@@ -8,7 +8,7 @@ aside {
 aside h3 {
   text-align: center;
   font-size: 2.4rem;
-  font-weight: normal;
+  font-weight: 300;
   padding: 2.2rem 0 2rem 0;
   color: #605F5E;
 }
@@ -17,13 +17,18 @@ aside .nav-aside {
 }
 aside .nav-aside__menu ul {
   list-style-type: disclosure-closed;
+  margin-bottom: 1.5rem;
 }
 aside .nav-aside__menu ul li {
   color: #247BA0;
-  padding: 1.6rem 0 1.6rem 1rem;
+  padding: 1.6rem 0 0.6rem 1rem;
+  font-weight: 300;
 }
 aside .nav-aside__menu ul li a {
   color: #605F5E;
+}
+aside .nav-aside__menu ul li:hover {
+  font-weight: 500;
 }
 
 @media (min-width: 540px) {

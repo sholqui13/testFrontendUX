@@ -7,11 +7,11 @@ section {
 section .container {
   padding-bottom: 3rem;
 }
-section .container .cards-notices_image {
+section .container .cards-notices__image {
   cursor: pointer;
   position: relative;
 }
-section .container .cards-notices_image_info {
+section .container .cards-notices__image__info {
   padding: 0.3rem 1rem 0;
   position: absolute;
   color: white;
@@ -21,22 +21,22 @@ section .container .cards-notices_image_info {
   top: 11.9rem;
   border-radius: 0 0 1.6rem 1.6rem;
 }
-section .container .cards-notices_image_info .paragraph {
+section .container .cards-notices__image__info .paragraph {
   display: none;
 }
-section .container .cards-notices_image_info .title {
+section .container .cards-notices__image__info .title {
   font-weight: lighter;
 }
-section .container .cards-notices_image_info .price {
+section .container .cards-notices__image__info .price {
   font-size: 2rem;
   font-weight: bold;
   text-align: right;
 }
-section .container .cards-notices_image_picture img {
+section .container .cards-notices__image__picture img {
   border-radius: 1.6rem;
   border: 1px solid #0A2463;
 }
-section .container .cards-notices_image:hover .cards-notices_image_info {
+section .container .cards-notices__image:hover .cards-notices__image__info {
   border-radius: 1.6rem;
   height: 20.7rem;
   top: 0rem;
@@ -44,15 +44,15 @@ section .container .cards-notices_image:hover .cards-notices_image_info {
   padding-left: 1.7rem;
   font-weight: lighter;
 }
-section .container .cards-notices_image:hover .cards-notices_image_info .paragraph {
+section .container .cards-notices__image:hover .cards-notices__image__info .paragraph {
   display: block;
 }
-section .container .cards-notices_image:hover .cards-notices_image_info .paragraph a {
+section .container .cards-notices__image:hover .cards-notices__image__info .paragraph a {
   color: white;
   cursor: pointer;
   text-decoration: underline;
 }
-section .container .cards-notices_image:hover .cards-notices_image_picture img {
+section .container .cards-notices__image:hover .cards-notices__image__picture img {
   border: 4px solid #FB3640;
 }
 
